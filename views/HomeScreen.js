@@ -18,6 +18,7 @@ export default function HomeScreen({ navigation }) {
       <Button title="Estudios" onPress={() => navigation.navigate("Estudios")} />
       <Button title="Citas Medicas" onPress={() => navigation.navigate('Citas')} />
       <Button title="Informacion Medica" onPress={() => navigation.navigate("Informacion")} />
+      
     </View>
   );
 }

@@ -12,6 +12,8 @@ import EstudiosScreen from "../views/EstudiosScreen";
 import CitasScreen from "../views/CitasScreen";
 import InformacionScreen from "../views/InformacionScreen";
 import ListanotasScreen from "../views/ListanotasScreen";
+import ListaestudiosScreen from "../views/ListaestudiosScreen";
+import ListarecetaScreen from "../views/ListarecetaScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -64,6 +66,8 @@ export default function Route() {
                 <Stack.Screen name="Citas" component={CitasScreen} />
                 <Stack.Screen name="Informacion" component={InformacionScreen} />
                 <Stack.Screen name="Listanotas" component={ListanotasScreen} />
+                <Stack.Screen name="Listaestudios" component={ListaestudiosScreen} />
+                <Stack.Screen name="Listareceta" component={ListarecetaScreen} />
             </Stack.Navigator>
         </NavigationContainer>
 

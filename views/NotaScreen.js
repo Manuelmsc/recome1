@@ -8,8 +8,8 @@ import { Icon } from '@rneui/themed';
 import { Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const Tab = createBottomTabNavigator();
 
+const Tab = createBottomTabNavigator();
 
 export default function NotaScreen() {
   const navigation = useNavigation();
@@ -17,15 +17,36 @@ export default function NotaScreen() {
   return (
     
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Pantalla Notas Medicas</Text>
-      <Text>Contenido</Text>
-      <TextInput style={styles.input} placeholder="Ingrese los datos"/>
-      <Text>Ingresa el nombre del doctor</Text>
-      <TextInput style={styles.input} placeholder="Ingrese los datos"/>
-      <Button radius={'sm'} onPress={() => Alert.alert('Nota Medica','Guardada Correctamente',[{text: '', onPress: () => console.log('Ask me later pressed')},
+      <Text>Crear Nota Medica</Text>
+      <TextInput style={styles.input} placeholder="Ingrese Nombre  Paciente"/>
+      <Text>Nombre Completo del Paciente</Text>
+      <TextInput style={styles.input} placeholder="Ingrese Nombre Medico"/>
+      <Text>Nombre Completo del Medico</Text>
+      <TextInput style={styles.input} placeholder="Ingrese la Frecuencia Cardiaca"/>
+      <Text>Solo valores Numericos</Text>
+      <TextInput style={styles.input} placeholder="Ingrese la Frecuencia Respiratoria"/>
+      <Text>Solo valores Numericos</Text>
+      <TextInput style={styles.input} placeholder="Ingrese la Talla"/>
+      <Text> solo valores Numericos</Text>
+      <TextInput style={styles.input} placeholder="Ingrese la Temperatura"/>
+      <Text> solo valores Numericos</Text>
+      <TextInput style={styles.input} placeholder="Descripcion de la afeccion Principal"/>
+      <Text> Ingrese la descripcion de la afeccion principal</Text>
+
+      <Button radius={'sm'} onPress={() => Alert.alert('Nota Medica','Fue Guardada Correctamente',[{text: '', onPress: () => console.log('Ask me later pressed')},
       {text: 'Cancel',onPress: () => console.log('Cancel Pressed'),style: 'cancel',},
       {text: 'OK', onPress: () => navigation.navigate("Listanotas")},],{cancelable: false},)} type="solid"> Guardar<Icon name="save" color="white" /></Button>
       
+    {/* <AppBar variant="bottom" leading={props => (
+        <IconButton icon={props => <Icon name="menu" {...props} />} {...props} />)} trailing={props => (
+        <IconButton icon={props => <Icon name="magnify" {...props} />}{...props}/> )}
+        style={{ position: "absolute", start: 0, end: 0, bottom: 0 }}>
+      <FAB
+        icon={props => <Icon name="plus" {...props} />}
+        style={{ position: "absolute", top: -28, alignSelf: "center" }}/>
+    </AppBar> */}
+
+
       {/* <Tab.Navigator
           screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
@@ -57,8 +78,6 @@ export default function NotaScreen() {
   );
 }
 
-
-
 const styles = StyleSheet.create({
   input: {
     height: 40,
@@ -68,3 +87,5 @@ const styles = StyleSheet.create({
     width: "50%",
   },
 });
+
+
