@@ -1,14 +1,11 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-
-export default function EstudiosScreen() {
+export default function CitasScreen() {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Pantalla Estudios de Laboratorio u/o Gabinete</Text>
+      <Text>Pantalla Citas Medicas</Text>
       <Text>Contenido</Text>
     </View>
   );
 }
-
-
