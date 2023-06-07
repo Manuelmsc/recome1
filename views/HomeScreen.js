@@ -7,8 +7,13 @@ import NotaScreen from "../views/NotaScreen";
 import EstudiosScreen from "../views/EstudiosScreen";
 import CitasScreen from "../views/CitasScreen";
 import InformacionScreen from "../views/InformacionScreen";
+import ListanotasScreen from "../views/ListanotasScreen";
+import ListaestudiosScreen from "../views/ListaestudiosScreen";
+import ListarecetaScreen from "../views/ListarecetaScreen";
+
 
 export default function HomeScreen({ navigation }) {
+
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>Pantalla principal</Text>

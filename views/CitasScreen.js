@@ -8,13 +8,16 @@ import { Icon } from '@rneui/themed';
 import { Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+
 const Tab = createBottomTabNavigator();
+
 
 export default function CitasScreen() {
   const navigation = useNavigation();
+ 
 
   return (
-    
+
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>Agendar Cita Medica</Text>
       <TextInput style={styles.input} placeholder="Ingrese Nombre del Paciente"/>
