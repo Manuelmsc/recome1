@@ -5,17 +5,15 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationContainer } from "@react-navigation/native";
 import { Button } from '@rneui/themed';
 import { Icon } from '@rneui/themed';
-
-import HomeScreen from "../views/HomeScreen";
-import RecetaScreen from "../views/RecetaScreen";
-import EstudiosScreen from "../views/EstudiosScreen";
-import CitasScreen from "../views/CitasScreen";
-import InformacionScreen from "../views/InformacionScreen";
+import { Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const Tab = createBottomTabNavigator();
 
 
 export default function NotaScreen() {
+  const navigation = useNavigation();
+
   return (
     
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
@@ -24,9 +22,10 @@ export default function NotaScreen() {
       <TextInput style={styles.input} placeholder="Ingrese los datos"/>
       <Text>Ingresa el nombre del doctor</Text>
       <TextInput style={styles.input} placeholder="Ingrese los datos"/>
-      <Button radius={'sm'} onPress={() => alert("Guardado Correctamente")} type="solid"> Guardar<Icon name="save" color="white" /></Button>
+      <Button radius={'sm'} onPress={() => Alert.alert('Nota Medica','Guardada Correctamente',[{text: '', onPress: () => console.log('Ask me later pressed')},
+      {text: 'Cancel',onPress: () => console.log('Cancel Pressed'),style: 'cancel',},
+      {text: 'OK', onPress: () => navigation.navigate("Listanotas")},],{cancelable: false},)} type="solid"> Guardar<Icon name="save" color="white" /></Button>
       
-          
       {/* <Tab.Navigator
           screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
