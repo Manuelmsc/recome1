@@ -24,9 +24,9 @@ export default function NotaScreen() {
       <TextInput style={styles.input} placeholder="Ingrese los datos"/>
       <Text>Ingresa el nombre del doctor</Text>
       <TextInput style={styles.input} placeholder="Ingrese los datos"/>
-      <Button radius={'sm'} type="solid"> Guardar<Icon name="save" color="white" /></Button>
-
+      <Button radius={'sm'} onPress={() => alert("Guardado Correctamente")} type="solid"> Guardar<Icon name="save" color="white" /></Button>
       
+          
       {/* <Tab.Navigator
           screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
