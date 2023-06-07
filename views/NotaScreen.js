@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationContainer } from "@react-navigation/native";
 import { Button } from '@rneui/themed';
+import { Icon } from '@rneui/themed';
 
 import HomeScreen from "../views/HomeScreen";
 import RecetaScreen from "../views/RecetaScreen";
@@ -23,7 +24,7 @@ export default function NotaScreen() {
       <TextInput style={styles.input} placeholder="Ingrese los datos"/>
       <Text>Ingresa el nombre del doctor</Text>
       <TextInput style={styles.input} placeholder="Ingrese los datos"/>
-      <Button radius={'sm'} type="solid"> Guargar<Icon name="save" color="white" /></Button>
+      <Button radius={'sm'} type="solid"> Guardar<Icon name="save" color="white" /></Button>
 
       
       {/* <Tab.Navigator
