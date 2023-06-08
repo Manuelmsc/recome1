@@ -2,11 +2,11 @@ import React from "react";
 import { View, Text, TextInput, StyleSheet } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { NavigationContainer } from "@react-navigation/native";
 import { Button } from '@rneui/themed';
 import { Icon } from '@rneui/themed';
 import { Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { RadioButton } from 'react-native-paper';
 
 
 const Tab = createBottomTabNavigator();
@@ -14,6 +14,8 @@ const Tab = createBottomTabNavigator();
 
 export default function CitasScreen() {
   const navigation = useNavigation();
+  const [checked, setChecked] = React.useState('first')
+
  
 
   return (
@@ -22,6 +24,16 @@ export default function CitasScreen() {
       <Text>Agendar Cita Medica</Text>
       <TextInput style={styles.input} placeholder="Ingrese Nombre del Paciente"/>
       <Text>Nombre Completo del Paciente</Text>
+      <RadioButton
+        value="first"
+        status={ checked === 'first' ? 'checked' : 'unchecked' }
+        onPress={() => setChecked('first')}
+      />
+      <RadioButton
+        value="second"
+        status={ checked === 'second' ? 'checked' : 'unchecked' }
+        onPress={() => setChecked('second')}
+      />
       <TextInput style={styles.input} placeholder="Ingrese Genero"/>
       <Text>Genero</Text>
       <TextInput style={styles.input} placeholder="Ingrese la edad del paciente"/>
