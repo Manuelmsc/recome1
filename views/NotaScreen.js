@@ -1,10 +1,10 @@
 import React from "react";
-import { View, Text, TextInput, StyleSheet } from "react-native";
+import { ScrollView, Text, TextInput, StyleSheet } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationContainer } from "@react-navigation/native";
 import { Button } from '@rneui/themed';
-import { Icon } from '@rneui/themed';
+import { Icon,Input } from '@rneui/themed';
 import { Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -13,25 +13,40 @@ const Tab = createBottomTabNavigator();
 
 export default function NotaScreen() {
   const navigation = useNavigation();
+  navigation.setOptions({ title: 'Crear Nota Medica'  })
 
   return (
     
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Crear Nota Medica</Text>
-      <TextInput style={styles.input} placeholder="Ingrese Nombre  Paciente"/>
-      <Text>Nombre Completo del Paciente</Text>
-      <TextInput style={styles.input} placeholder="Ingrese Nombre Medico"/>
-      <Text>Nombre Completo del Medico</Text>
-      <TextInput style={styles.input} placeholder="Ingrese la Frecuencia Cardiaca"/>
-      <Text>Solo valores Numericos</Text>
-      <TextInput style={styles.input} placeholder="Ingrese la Frecuencia Respiratoria"/>
-      <Text>Solo valores Numericos</Text>
-      <TextInput style={styles.input} placeholder="Ingrese la Talla"/>
-      <Text> solo valores Numericos</Text>
-      <TextInput style={styles.input} placeholder="Ingrese la Temperatura"/>
-      <Text> solo valores Numericos</Text>
-      <TextInput style={styles.input} placeholder="Descripcion de la afeccion Principal"/>
-      <Text> Ingrese la descripcion de la afeccion principal</Text>
+    <ScrollView>
+
+      <Input containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
+        inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Nombre Completo del Paciente" labelStyle={{}}
+        labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingrese Nombre Completo del Paciente"
+      />
+      <Input containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
+        inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Nombre Completo del Medico" labelStyle={{}}
+        labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingrese Nombre Completo del Medico"
+      />
+      <Input containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
+        inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Frecuencia Cardiaca" labelStyle={{}}
+        labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingrese la Frecuencia Cardiaca"
+      />
+      <Input containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
+        inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Frecuencia Respiratoria" labelStyle={{}}
+        labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingrese la Frecuencia Respiratoria"
+      />
+      <Input containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
+        inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Talla" labelStyle={{}}
+        labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingrese la Talla del Paciente"
+      />
+      <Input containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
+        inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Temperatura" labelStyle={{}}
+        labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingrese la Temperatura del Paciente"
+      />
+      <Input multiline numberOfLines={10} containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
+        inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Afeccion principal" labelStyle={{}}
+        labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingrese la descripcion de la afeccion principal"
+      />
 
       <Button radius={'sm'} onPress={() => Alert.alert('Nota Medica','Fue Guardada Correctamente',[{text: '', onPress: () => console.log('Ask me later pressed')},
       {text: 'Cancel',onPress: () => console.log('Cancel Pressed'),style: 'cancel',},
@@ -63,7 +78,7 @@ export default function NotaScreen() {
           <Tab.Screen name="Citas" component={CitasScreen} />
           <Tab.Screen name="Estudios" component={EstudiosScreen} />
       </Tab.Navigator> */}
-    </View>  
+    </ScrollView>  
 
   );
 }

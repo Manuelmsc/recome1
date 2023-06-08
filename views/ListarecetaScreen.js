@@ -7,6 +7,7 @@ export default function ListarecetaScreen() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
           <Text>Pantalla Lista de Recetas</Text>
+          
          
       
       </View>
