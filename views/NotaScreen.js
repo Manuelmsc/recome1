@@ -7,6 +7,9 @@ import { Button } from '@rneui/themed';
 import { Icon,Input } from '@rneui/themed';
 import { Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { AppBar, IconButton, FAB } from "@react-native-material/core";
+import { Appbar } from 'react-native-paper';
+
 
 
 const Tab = createBottomTabNavigator();
@@ -17,7 +20,7 @@ export default function NotaScreen() {
 
   return (
     
-    <ScrollView>
+    <ScrollView >
 
       <Input containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
         inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Nombre Completo del Paciente" labelStyle={{}}
@@ -52,6 +55,27 @@ export default function NotaScreen() {
       {text: 'Cancel',onPress: () => console.log('Cancel Pressed'),style: 'cancel',},
       {text: 'OK', onPress: () => navigation.navigate("Listanotas")},],{cancelable: false},)} type="solid"> Guardar<Icon name="save" color="white" /></Button>
       
+ 
+
+    {/* <AppBar
+          variant="bottom"
+          trailing={props => (
+      
+      <IconButton
+          onPress={() => navigation.navigate("Home")}
+          icon={props => <Icon name="home" {...props} />}
+          {...props}
+      />
+      )}
+          style={{ position: "absolute", start: 0, end: 0, bottom: 0 }}
+      >
+      <FAB
+          onPress={() => navigation.navigate("Listanotas")}
+          icon={props => <Icon name="add" {...props} />}
+          style={{ position: "absolute", top: -28, alignSelf: "center" }}
+      />
+    </AppBar> */}
+
       {/* <Tab.Navigator
           screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
@@ -83,7 +107,9 @@ export default function NotaScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+
+
+/* const styles = StyleSheet.create({
   input: {
     height: 40,
     margin: 12,
@@ -91,6 +117,6 @@ const styles = StyleSheet.create({
     padding: 10,
     width: "50%",
   },
-});
+}); */
 
 
