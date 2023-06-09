@@ -109,7 +109,7 @@ export default function NotaScreen() {
 
 
 
-/* const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   input: {
     height: 40,
     margin: 12,
@@ -117,6 +117,6 @@ export default function NotaScreen() {
     padding: 10,
     width: "50%",
   },
-}); */
+});*/
 
 

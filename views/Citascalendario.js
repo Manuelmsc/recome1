@@ -14,6 +14,9 @@ import React, {useState} from 'react';
    const [isPickerShow, setIsPickerShow] = useState(false);
    const [date, setDate] = useState(new Date(Date.now()));
    navigation.setOptions({ title: 'Agendar Cita Medica'  })
+   const [mode, setMode] = useState('date');
+    const [show, setShow] = useState(false);
+    const [text, setText] = useState('Empty');
 
    const showPicker = () => {
      setIsPickerShow(true);
@@ -26,6 +29,14 @@ import React, {useState} from 'react';
      }
    };
 
+   
+   const showMode = (currentMode) => {
+    setShow(true);
+    setMode(currentMode);
+  }
+
+   
+
    return (
      <View style={styles.container}>
        {/* Display the selected date */}
@@ -37,8 +48,8 @@ import React, {useState} from 'react';
        {!isPickerShow && (
         <View style={styles.btnContainer}>
            <Button title="Selecionar Fecha" color="purple" onPress={showPicker}  />
+           <Button title='TimePicker' onPress={()=> showMode('time')}/>
          </View>
-         
        )}
 
        {/* The date picker */}
