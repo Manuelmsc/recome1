@@ -17,7 +17,7 @@ import { useNavigation } from '@react-navigation/native';
 
     return (
     
-     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+     <View >
       <Input containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
         inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Nombre Completo" labelStyle={{}}
         labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingresar Nombre Completo"
@@ -46,13 +46,13 @@ import { useNavigation } from '@react-navigation/native';
    );
  }
 
-const styles = StyleSheet.create({
-   input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-    width: "50%",
-   },
-});
+// const styles = StyleSheet.create({
+//    input: {
+//     height: 40,
+//     margin: 12,
+//     borderWidth: 1,
+//     padding: 10,
+//     width: "50%",
+//    },
+// });
 

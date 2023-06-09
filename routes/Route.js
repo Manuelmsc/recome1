@@ -14,6 +14,8 @@ import InformacionScreen from "../views/InformacionScreen";
 import ListanotasScreen from "../views/ListanotasScreen";
 import ListaestudiosScreen from "../views/ListaestudiosScreen";
 import ListarecetaScreen from "../views/ListarecetaScreen";
+import Citascalendario from "../views/Citascalendario";
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -61,7 +63,7 @@ export default function Route() {
             <Stack.Navigator initialRouteName="Home">
               
                  <Stack.Screen
-                     name="Home"
+                     name="Pantalla Principal"
                      component={HomeScreen}
                  />
                  <Stack.Screen name="Receta" component={RecetaScreen} />
@@ -72,6 +74,8 @@ export default function Route() {
                  <Stack.Screen name="Listanotas" component={ListanotasScreen} />
                  <Stack.Screen name="Listaestudios" component={ListaestudiosScreen} />
                  <Stack.Screen name="Listareceta" component={ListarecetaScreen} />
+                 <Stack.Screen name="CCalendario" component={Citascalendario} />
+
              </Stack.Navigator>
          </NavigationContainer>
 

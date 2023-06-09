@@ -1,9 +1,10 @@
  import React from "react";
  import { View, Text } from "react-native";
- import { Icon,List,Item } from '@rneui/themed';
+ //import { List } from '@rneui/themed';
  import { AppBar, HStack, IconButton } from "@react-native-material/core";
  import { ListItem } from "@react-native-material/core";
  import { useNavigation } from '@react-navigation/native';
+ import { List } from 'react-native-paper';
 
 
 export default function ListanotasScreen() {
@@ -14,9 +15,12 @@ export default function ListanotasScreen() {
         <ListItem
           title="Jaime Eliazar Esparza"
           secondaryText="Paciente femenino de 36.4 semanas de gestacion cuenta con embarazo..."
-          
-
         />
+        <List.Item
+             title="Jaime Eliazar Esparza"
+             description="Paciente femenino de 36.4 semanas de gestacion cuenta con embarazo..."
+             left={props => <List.Icon {...props} icon="folder" />}
+  />
         <ListItem
           title="Jaime Eliazar Esparza"
           secondaryText="Paciente masculino tiene una fractura de perone expuesta..."
