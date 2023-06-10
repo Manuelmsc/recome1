@@ -11,8 +11,6 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
 
 
-
-
 const Tab = createBottomTabNavigator();
 
 
@@ -50,12 +48,6 @@ export default function CitasScreen() {
       <Button radius={'sm'} onPress={() => Alert.alert('Cita Medica','Fue Agendada Correctamente',[{text: '', onPress: () => console.log('Ask me later pressed')},
       {text: 'Cancel',onPress: () => console.log('Cancel Pressed'),style: 'cancel',},
       {text: 'OK', onPress: () => navigation.navigate("Pantalla Principal")},],{cancelable: false},)} type="solid"> Guardar<Icon name="save" color="white" /></Button>
-      {/* <Appbar.Header>
-        <Appbar.BackAction onPress={() => {}} />
-        <Appbar.Content title="home" />
-        <Appbar.Action icon="medkit" onPress={() => {}} />
-        <Appbar.Action icon="library" onPress={() => {}} />
-      </Appbar.Header>  */}
     </View>  
   );
 }
