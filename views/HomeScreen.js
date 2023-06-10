@@ -50,7 +50,7 @@ export default function HomeScreen({ navigation }) {
         <Button title="RECETA"
                    icon={
                     <Image
-                      source={require('../assets/nota.png')}
+                      source={require('../assets/receta.png')}
                       style={{ width: '22%', height: '150%',left:-30 }}
                     />}
                   iconContainerStyle={{ marginRight: 10 }}
@@ -72,7 +72,7 @@ export default function HomeScreen({ navigation }) {
       <Button title="ESTUDIOS"
                  icon={
                   <Image
-                    source={require('../assets/nota.png')}
+                    source={require('../assets/observacion.png')}
                     style={{ width: '22%', height: '150%',left:-22 }}
                   />}
                 iconContainerStyle={{ marginRight: 10 }}
@@ -94,7 +94,7 @@ export default function HomeScreen({ navigation }) {
         <Button title="CITA MEDICA"
                    icon={
                     <Image
-                      source={require('../assets/nota.png')}
+                      source={require('../assets/cita.png')}
                       style={{ width: '22%', height: '150%',left:-12 }}
                     />}
                   iconContainerStyle={{ marginRight: 10 }}
@@ -116,7 +116,7 @@ export default function HomeScreen({ navigation }) {
         <Button title="INFORMACION"
                    icon={
                     <Image
-                      source={require('../assets/nota.png')}
+                      source={require('../assets/buscar.png')}
                       style={{ width: '22%', height: '150%',left:-10 }}
                     />}
                   iconContainerStyle={{ marginRight: 10 }}
