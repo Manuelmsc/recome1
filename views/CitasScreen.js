@@ -23,31 +23,49 @@ export default function CitasScreen() {
   return (
 
     <View>
+      <View>
       <Input containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
         inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Nombre Completo" labelStyle={{}}
         labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingresar Nombre del Paciente"
       />
-      <RadioButton
-        value="first"
-        status={ checked === 'first' ? 'checked' : 'unchecked' }
-        onPress={() => setChecked('first')}
-      />
-      <RadioButton
-        value="second"
-        status={ checked === 'second' ? 'checked' : 'unchecked' }
-        onPress={() => setChecked('second')}
-      />
-      <Input containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
-        inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Edad" labelStyle={{}}
-        labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingrese la edad del paciente"
-      />
+
+      </View>    
+      <View style={{flexDirection: 'row'}}>
+          <RadioButton
+            value="first"
+            status={ checked === 'first' ? 'checked' : 'unchecked' }
+            onPress={() => setChecked('first')}     
+          />
+          <Text style={{top: 7}}>Masculino</Text>
+     </View >
+        <View style={{flexDirection: 'row'}}>
+            <RadioButton
+            value="second"
+            status={ checked === 'second' ? 'checked' : 'unchecked' }
+            onPress={() => setChecked('second')}
+          />
+          <Text style={{top: 7}}>Femenino</Text>
+    </View>
+    <View>
+        <Input containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
+          inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Edad" labelStyle={{}}
+          labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingrese la edad del paciente"
+        />
+    </View>
+    <View>
       <Input multiline numberOfLines={10} containerStyle={{}} disabledInputStyle={{ background: "#ddd" }}
-        inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Diagnostico Medico" labelStyle={{}}
-        labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingrese la Afecion Principal"
+          inputContainerStyle={{}} errorStyle={{}} errorProps={{}} inputStyle={{}} label="Diagnostico Medico" labelStyle={{}}
+          labelProps={{}} leftIconContainerStyle={{}} rightIconContainerStyle={{}} placeholder="Ingrese la Afecion Principal"
       />
-      <Button radius={'sm'} onPress={() => Alert.alert('Cita Medica','Fue Agendada Correctamente',[{text: '', onPress: () => console.log('Ask me later pressed')},
+
+    </View>
+    <Button radius={'sm'} onPress={() => Alert.alert('Cita Medica','Fue Agendada Correctamente',[{text: '', onPress: () => console.log('Ask me later pressed')},
       {text: 'Cancel',onPress: () => console.log('Cancel Pressed'),style: 'cancel',},
       {text: 'OK', onPress: () => navigation.navigate("Pantalla Principal")},],{cancelable: false},)} type="solid"> Guardar<Icon name="save" color="white" /></Button>
+    
+    <View>
+    </View> 
+      
     </View>  
   );
 }

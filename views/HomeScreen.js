@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text,Image } from "react-native";
 import { IconButton, MD3Colors } from 'react-native-paper';
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -24,119 +24,125 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-     
-      <Button title="NOTA MEDICA"
-              icon={{
-                name: '',
-                type: 'font-awesome',
-                size: 20,
-                color: 'white',
-              }}
-              iconContainerStyle={{ marginRight: 10 }}
-              titleStyle={{ fontWeight: '700' }}
-              buttonStyle={{
-                backgroundColor: 'rgba(90, 154, 230, 1)',
-                borderColor: 'transparent',
-                borderWidth: 0,
-                borderRadius: 30,
-              }}
-              containerStyle={{
-                width: 190,
-                marginHorizontal: 40,
-                marginVertical: 0,
-              }} onPress={() => navigation.navigate("Notas")}
-            />
-
-      <Button title="RECETA"
-              icon={{
-                name: 'medkit',
-                type: 'font-awesome',
-                size: 20,
-                color: 'white',
-              }}
-              iconContainerStyle={{ marginRight: 10 }}
-              titleStyle={{ fontWeight: '700' }}
-              buttonStyle={{
-                backgroundColor: 'rgba(90, 154, 230, 1)',
-                borderColor: 'transparent',
-                borderWidth: 0,
-                borderRadius: 30,
-              }}
-              containerStyle={{
-                width: 190,
-                marginHorizontal: 40,
-                marginVertical: 0,
-              }} onPress={() => navigation.navigate("Receta")}
-       />
-
+    <View style={{top: -90}}>
+        <Button title="NOTA MEDICA"                
+                  icon={
+                    <Image
+                      source={require('../assets/nota.png')}
+                      style={{ width: '22%', height: '150%' }}
+                    />}
+                  iconContainerStyle={{ marginRight: 10 }}
+                  titleStyle={{ fontWeight: '700' }}
+                  buttonStyle={{
+                    backgroundColor: 'rgba(90, 154, 230, 1)',
+                    borderColor: 'transparent',
+                    borderWidth: 0,
+                    borderRadius: 30,
+                  }}
+                  containerStyle={{
+                    width: 190,
+                    marginHorizontal: 40,
+                    marginVertical: 0,
+                  }} onPress={() => navigation.navigate("Notas")}
+                />
+    </View>       
+    <View  style={{top: -70}}>
+        <Button title="RECETA"
+                  icon={{
+                    name: 'medkit',
+                    type: 'font-awesome',
+                    size: 20,
+                    color: 'white',
+                  }}
+                  iconContainerStyle={{ marginRight: 10 }}
+                  titleStyle={{ fontWeight: '700' }}
+                  buttonStyle={{
+                    backgroundColor: 'rgba(90, 154, 230, 1)',
+                    borderColor: 'transparent',
+                    borderWidth: 0,
+                    borderRadius: 30,
+                  }}
+                  containerStyle={{
+                    width: 190,
+                    marginHorizontal: 40,
+                    marginVertical: 0,
+                  }} onPress={() => navigation.navigate("Receta")}
+          />
+    </View>
+    <View style={{top: -50}}>
       <Button title="ESTUDIOS"
-              icon={{
-                name: 'flask',
-                type: 'font-awesome',
-                size: 20,
-                color: 'white',
-              }}
-              iconContainerStyle={{ marginRight: 10 }}
-              titleStyle={{ fontWeight: '700' }}
-              buttonStyle={{
-                backgroundColor: 'rgba(90, 154, 230, 1)',
-                borderColor: 'transparent',
-                borderWidth: 0,
-                borderRadius: 30,
-              }}
-              containerStyle={{
-                width: 190,
-                marginHorizontal: 40,
-                marginVertical: 0,
-              }} onPress={() => navigation.navigate("Estudios")}
-      />
-
+                icon={{
+                  name: 'flask',
+                  type: 'font-awesome',
+                  size: 20,
+                  color: 'white',
+                }}
+                iconContainerStyle={{ marginRight: 10 }}
+                titleStyle={{ fontWeight: '700' }}
+                buttonStyle={{
+                  backgroundColor: 'rgba(90, 154, 230, 1)',
+                  borderColor: 'transparent',
+                  borderWidth: 0,
+                  borderRadius: 30,
+                }}
+                containerStyle={{
+                  width: 190,
+                  marginHorizontal: 40,
+                  marginVertical: 0,
+                }} onPress={() => navigation.navigate("Estudios")}
+        />
+    </View>
+    <View style={{top: -30}}>
         <Button title="CITA MEDICA"
-              icon={{
-                name: 'AiFillAmazonCircle',
-                type: 'font-awesome',
-                size: 20,
-                color: 'white',
-              }}
-              iconContainerStyle={{ marginRight: 10 }}
-              titleStyle={{ fontWeight: '700' }}
-              buttonStyle={{
-                backgroundColor: 'rgba(90, 154, 230, 1)',
-                borderColor: 'transparent',
-                borderWidth: 0,
-                borderRadius: 30,
-              }}
-              containerStyle={{
-                width: 190,
-                marginHorizontal: 40,
-                marginVertical: 0,
-              }} onPress={() => navigation.navigate("CCalendario")}
-         />
+                  icon={{
+                    name: 'home',
+                    type: 'font-awesome',
+                    size: 20,
+                    color: 'white',
+                  }}
+                  iconContainerStyle={{ marginRight: 10 }}
+                  titleStyle={{ fontWeight: '700' }}
+                  buttonStyle={{
+                    backgroundColor: 'rgba(90, 154, 230, 1)',
+                    borderColor: 'transparent',
+                    borderWidth: 0,
+                    borderRadius: 30,
+                  }}
+                  containerStyle={{
+                    width: 190,
+                    marginHorizontal: 40,
+                    marginVertical: 0,
+                  }} onPress={() => navigation.navigate("CCalendario")}
+            />
+    </View>
+    <View style={{top: -10}}>
+        <Button title="INFORMACION"
+                  icon={{
+                    name: 'home',
+                    type: 'font-awesome',
+                    size: 20,
+                    color: 'white',
+                  }}
+                  iconContainerStyle={{ marginRight: 10 }}
+                  titleStyle={{ fontWeight: '700' }}
+                  buttonStyle={{
+                    backgroundColor: 'rgba(90, 154, 230, 1)',
+                    borderColor: 'transparent',
+                    borderWidth: 0,
+                    borderRadius: 30,
+                  }}
+                  containerStyle={{
+                    width: 190,
+                    marginHorizontal: 40,
+                    marginVertical: 0,
+                  }} onPress={() => navigation.navigate("Informacion")}
+              /> 
+    </View>
+    </View>
+  );
+}
 
-          <Button title="INFORMACION"
-              icon={{
-                name: 'home',
-                type: 'font-awesome',
-                size: 20,
-                color: 'white',
-              }}
-              iconContainerStyle={{ marginRight: 10 }}
-              titleStyle={{ fontWeight: '700' }}
-              buttonStyle={{
-                backgroundColor: 'rgba(90, 154, 230, 1)',
-                borderColor: 'transparent',
-                borderWidth: 0,
-                borderRadius: 30,
-              }}
-              containerStyle={{
-                width: 190,
-                marginHorizontal: 40,
-                marginVertical: 0,
-              }} onPress={() => navigation.navigate("Informacion")}
-          /> 
-
-
-      {/* <IconButton icon="home" iconColor={MD3Colors.error50} title="Notas" size={60}
+{/* <IconButton icon="home" iconColor={MD3Colors.error50} title="Notas" size={60}
         onPress={() => navigation.navigate("Notas")}/>
 
       <IconButton icon="home" iconColor={MD3Colors.error50} title="Receta" size={60}
@@ -157,9 +163,4 @@ export default function HomeScreen({ navigation }) {
       <Button title="Citas Medicas" onPress={() => navigation.navigate('Citas')} />
       <Button title="Informacion Medica" onPress={() => navigation.navigate("Informacion")} />  */}
       
-    </View>
-  );
-}
-
-
 
