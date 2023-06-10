@@ -29,10 +29,10 @@ export default function HomeScreen({ navigation }) {
                   icon={
                     <Image
                       source={require('../assets/nota.png')}
-                      style={{ width: '22%', height: '150%' }}
+                      style={{ width: '22%', height: '150%', left:-10 }}
                     />}
                   iconContainerStyle={{ marginRight: 10 }}
-                  titleStyle={{ fontWeight: '700' }}
+                  titleStyle={{ fontWeight: '700',left: -1 }}
                   buttonStyle={{
                     backgroundColor: 'rgba(90, 154, 230, 1)',
                     borderColor: 'transparent',
@@ -48,14 +48,13 @@ export default function HomeScreen({ navigation }) {
     </View>       
     <View  style={{top: -70}}>
         <Button title="RECETA"
-                  icon={{
-                    name: 'medkit',
-                    type: 'font-awesome',
-                    size: 20,
-                    color: 'white',
-                  }}
+                   icon={
+                    <Image
+                      source={require('../assets/nota.png')}
+                      style={{ width: '22%', height: '150%',left:-30 }}
+                    />}
                   iconContainerStyle={{ marginRight: 10 }}
-                  titleStyle={{ fontWeight: '700' }}
+                  titleStyle={{ fontWeight: '700' ,left: -18}}
                   buttonStyle={{
                     backgroundColor: 'rgba(90, 154, 230, 1)',
                     borderColor: 'transparent',
@@ -71,14 +70,13 @@ export default function HomeScreen({ navigation }) {
     </View>
     <View style={{top: -50}}>
       <Button title="ESTUDIOS"
-                icon={{
-                  name: 'flask',
-                  type: 'font-awesome',
-                  size: 20,
-                  color: 'white',
-                }}
+                 icon={
+                  <Image
+                    source={require('../assets/nota.png')}
+                    style={{ width: '22%', height: '150%',left:-22 }}
+                  />}
                 iconContainerStyle={{ marginRight: 10 }}
-                titleStyle={{ fontWeight: '700' }}
+                titleStyle={{ fontWeight: '700',left: -13 }}
                 buttonStyle={{
                   backgroundColor: 'rgba(90, 154, 230, 1)',
                   borderColor: 'transparent',
@@ -94,14 +92,13 @@ export default function HomeScreen({ navigation }) {
     </View>
     <View style={{top: -30}}>
         <Button title="CITA MEDICA"
-                  icon={{
-                    name: 'home',
-                    type: 'font-awesome',
-                    size: 20,
-                    color: 'white',
-                  }}
+                   icon={
+                    <Image
+                      source={require('../assets/nota.png')}
+                      style={{ width: '22%', height: '150%',left:-12 }}
+                    />}
                   iconContainerStyle={{ marginRight: 10 }}
-                  titleStyle={{ fontWeight: '700' }}
+                  titleStyle={{ fontWeight: '700',left: -2 }}
                   buttonStyle={{
                     backgroundColor: 'rgba(90, 154, 230, 1)',
                     borderColor: 'transparent',
@@ -117,14 +114,13 @@ export default function HomeScreen({ navigation }) {
     </View>
     <View style={{top: -10}}>
         <Button title="INFORMACION"
-                  icon={{
-                    name: 'home',
-                    type: 'font-awesome',
-                    size: 20,
-                    color: 'white',
-                  }}
+                   icon={
+                    <Image
+                      source={require('../assets/nota.png')}
+                      style={{ width: '22%', height: '150%',left:-10 }}
+                    />}
                   iconContainerStyle={{ marginRight: 10 }}
-                  titleStyle={{ fontWeight: '700' }}
+                  titleStyle={{ fontWeight: '700' ,left: -0 }}
                   buttonStyle={{
                     backgroundColor: 'rgba(90, 154, 230, 1)',
                     borderColor: 'transparent',
