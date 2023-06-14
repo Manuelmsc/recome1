@@ -137,26 +137,5 @@ export default function HomeScreen({ navigation }) {
     </View>
   );
 }
-
-{/* <IconButton icon="home" iconColor={MD3Colors.error50} title="Notas" size={60}
-        onPress={() => navigation.navigate("Notas")}/>
-
-      <IconButton icon="home" iconColor={MD3Colors.error50} title="Receta" size={60}
-        onPress={() => navigation.navigate("Receta")}/>
-
-      <IconButton icon="home" iconColor={MD3Colors.error50} title="Estudios" size={60}
-        onPress={() => navigation.navigate("Estudios")}/>
-
-      <IconButton icon="home" iconColor={MD3Colors.error50} title="Citas" size={60}
-        onPress={() => navigation.navigate("Citas")}/>
-
-      <IconButton icon="home" iconColor={MD3Colors.error50} title="Informacion" size={60}
-        onPress={() => navigation.navigate("Informacion")} />  */}
-
-      {/* <Button icon="home" title="Notas" onPress={() => navigation.navigate("Notas")} />
-      <Button title="Recetas" onPress={() => navigation.navigate("Receta")} />
-      <Button title="Estudios" onPress={() => navigation.navigate("Estudios")} />
-      <Button title="Citas Medicas" onPress={() => navigation.navigate('Citas')} />
-      <Button title="Informacion Medica" onPress={() => navigation.navigate("Informacion")} />  */}
-      
+   
 
